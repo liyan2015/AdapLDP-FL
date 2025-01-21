@@ -57,9 +57,9 @@ To run the code, it needs some libraies:
 
 - Python >= 3.8
 - Pytorch >= 1.10
-- torchvision >= 0.11
-- phe >= 1.5
-- skfuzzy >= 0.4
+- numpy >= 1.22.4
+- pandas  >= 2.2.2
+- anaconda-client >= 1.9.0
 
 Our environment is shown in the file, named `environment.yaml`.
 
@@ -71,7 +71,7 @@ Our environment is shown in the file, named `environment.yaml`.
 
 You can run like main.py this:
 
-python main.py --dataset mnist --iid --model cnn --epochs 50 --frac 0.1 --dp_mechanism Gaussian --dp_epsilon 10 --dp_delta 1e-5
+python main.py --dataset mnist --iid --model cnn --epochs 50 --frac 0.1 --dp_mechanism Gaussian --dp_epsilon 5 --dp_delta 1e-5
 
   
 
@@ -84,10 +84,10 @@ If you use this repository, please cite:
 ```bibtex
 @article{yue2025AdapLDP-FL,
   title={AdapLDP-FL: An Adaptive Local DifferentialPrivacy for Federated Learning},
-  author={Han, Junhao and Yan, Li},
-  journal={IEEE Internet of Things Journal},
+  author={Yue, Gaofeng and Yan, Li},
+  journal={IEEE Transactions on Mobile Computing},
   volume={Early Access},
-  year={2023},
+  year={2025},
   publisher={IEEE}
 }
 ```
