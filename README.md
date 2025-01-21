@@ -36,6 +36,10 @@ The code in the folder [models](models/Fed.py) is for enhancing the trade-off be
 
 The input is the path of the dataset.
 
+You can run like main.py this:
+
+python main.py --dataset mnist --iid --model cnn --epochs 50 --frac 0.1 --dp_mechanism Gaussian --dp_epsilon 5 --dp_delta 1e-5
+
 <!-- end Clipping -->
 
 ## 2. Skipping of Clipping Operation
@@ -47,6 +51,10 @@ The code in the folder [models](models/Fed.py) is for enhancing convergence spee
 `main.py` is the main function.
 
 The input is the path of the dataset.
+
+You can run like main.py this:
+
+python main.py --dataset mnist --iid --model cnn --epochs 50 --frac 0.1 --dp_mechanism Gaussian --dp_epsilon 5 --dp_delta 1e-5
 
 <!-- end Clipping -->
 
@@ -69,9 +77,7 @@ Our environment is shown in the file, named `environment.yaml`.
 
 **Model**: CNN, MLP
 
-You can run like main.py this:
 
-python main.py --dataset mnist --iid --model cnn --epochs 50 --frac 0.1 --dp_mechanism Gaussian --dp_epsilon 5 --dp_delta 1e-5
 
   
 
