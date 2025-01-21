@@ -21,7 +21,7 @@ This repository provides the implementation of the paper ["AdapLDP-FL: An Adapti
 We built a privacy-preserving FL based on our proposed adaptive LDP, mainly consisting of adaptive updating noise and transform noise direction. 
 
 <p align="center">
-<img src="fig/framework.jpg" align="center" width="85%"/>
+<img src="Fig/framework.jpg" align="center" width="85%"/>
 </p>
 
 <!-- end intro -->
