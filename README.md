@@ -30,7 +30,7 @@ We built a privacy-preserving FL based on our proposed adaptive LDP, mainly cons
 
 <!-- start sparsity -->
 
-The code in the folder [CNN Sparisty](https://github.com/liyan2015/AdaptiveBatchHE/tree/main/CNN%20Sparisty) is for determining the sparsity vectors of clients.
+The code in the folder [Noise Scaler](models/Fed.py) is for enhancing the trade-off between privacy and performance.
 
 `federated_main.py` is the main function.
 
