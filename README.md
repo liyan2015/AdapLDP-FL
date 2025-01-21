@@ -7,8 +7,8 @@ This repository provides the implementation of the paper ["AdapLDP-FL: An Adapti
 <table>
   <tr>
     <td width="25%"><img src="Fig/github_loss76.png" width="300"></td>
-    <td width="25%"><img src="Fig/githubacc103.png" width="300"></td>
-    <td width="25%"><img src="Fig/githubspeed83.png" width="300" ></td>
+    <td width="25%"><img src="Fig/githubspeed833.png" width="300"></td>
+    <td width="25%"><img src="Fig/githubacc103.png" width="300" ></td>
   </tr>
   <tr>
     <td width="25%">Loss function on three public datasets.</td>
