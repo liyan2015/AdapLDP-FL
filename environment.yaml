@@ -209,6 +209,8 @@ openpyxl                           3.1.5
 opt-einsum                         3.3.0
 optree                             0.11.0
 packaging                          24.1
+Python                             3.8
+Pytorch                            1.10
 pandas                             2.2.2
 pandocfilters                      1.4.3
 paramiko                           2.7.2
