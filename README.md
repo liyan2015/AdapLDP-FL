@@ -30,7 +30,7 @@ We built a privacy-preserving FL based on our proposed adaptive LDP, mainly cons
 
 <!-- start Noise -->
 
-The code in the folder [models](models/Fed.py) is for enhancing the trade-off between privacy and performance.
+The code in the folder [models/Fed](models/Fed.py) is for enhancing the trade-off between privacy and performance.
 
 `main.py` is the main function.
 
@@ -46,7 +46,7 @@ python main.py --dataset mnist --iid --model cnn --epochs 50 --frac 0.1 --dp_mec
 
 <!-- start Clipping -->
 
-The code in the folder [models](models/Fed.py) is for enhancing convergence speed and  model drift problems of LDP-FL approach.
+The code in the folder [models/Fed](models/Fed.py) is for enhancing convergence speed and  model drift problems of LDP-FL approach.
 
 `main.py` is the main function.
 
