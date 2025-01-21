@@ -43,40 +43,10 @@ def ModelSub(w1, w2):
 
 
 def Ang_matrix(tensor1, tensor2):
-    tensor1 = tensor1.numpy()
-    tensor2 = tensor2.numpy()
-    # product of two tensors
-    elementwise_product = tensor1 * tensor2
-    # Compute the norm of the tensors
-    norm_tensor1 = np.linalg.norm(tensor1)
-    norm_tensor2 = np.linalg.norm(tensor2)
-    # Angle between the two tensors (in degrees)
-    angle_rad = np.arccos(elementwise_product / (norm_tensor1 * norm_tensor2 + 0.0001))
-    # Convert the angle from radians to degrees
-    angle_deg = np.degrees(angle_rad)
-    # -1 if the angle is obtuse, 1 if the angle is acute
-    result = np.ones_like(angle_deg)  # Create a new array to store the updated values
-    alpha = 0.02
-    for index, value in np.ndenumerate(angle_deg):
-        result[index] = torch.tensor(alpha * np.cos(value)) 
     return torch.tensor(result)
 
 def update_dict_values(my_dict):
-    count_minus1 = 0
-    count_1 = 0
-    for key in my_dict.keys():
-        if torch.eq(my_dict[key], torch.tensor(-1.0)).all():
-            count_minus1 += 1
-        elif torch.eq(my_dict[key], torch.tensor(1.0)).all():
-            count_1 += 1
-    if count_minus1 > count_1:
-        for key in my_dict.keys():
-            if torch.eq(my_dict[key], torch.tensor(1)).all():
-                my_dict[key] = torch.tensor(-1)
-    else:
-        for key in my_dict.keys():
-            if torch.eq(my_dict[key], torch.tensor(-1)).all():
-                my_dict[key] = torch.tensor(1)
+
     return my_dict
 
 def update_tensor_values(my_tensor):
@@ -100,11 +70,6 @@ def update_tensor_values(my_tensor):
 
 # direction matrix 
 def Dir_mat(wi_t, wi_t_1, wg_t_1, wg_t_2):
-    tilde_wi = ModelSub(copy.deepcopy(wi_t),copy.deepcopy(wi_t_1))  
-    tilde_wg =  ModelSub(copy.deepcopy(wg_t_1),copy.deepcopy(wg_t_2))
-    w_res = copy.deepcopy(tilde_wi)
-    for k in wi_t.keys():
-        w_res[k] = Ang_matrix(tilde_wi[k], tilde_wg[k])
     return copy.deepcopy(w_res)
 
 
