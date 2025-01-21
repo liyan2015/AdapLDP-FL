@@ -28,33 +28,27 @@ We built a privacy-preserving FL based on our proposed adaptive LDP, mainly cons
 
 ## 1. Optimizing Noise Constraints
 
-<!-- start sparsity -->
+<!-- start Noise -->
 
-The code in the folder [Noise Scaler](models/Fed.py) is for enhancing the trade-off between privacy and performance.
+The code in the folder [models](models/Fed.py) is for enhancing the trade-off between privacy and performance.
 
-`federated_main.py` is the main function.
+`main.py` is the main function.
 
 The input is the path of the dataset.
 
-<!-- end sparsity -->
+<!-- end Clipping -->
 
 ## 2. Skipping of Clipping Operation
 
-<!-- start fuzzy -->
+<!-- start Clipping -->
 
-<p align="center">
-<img src="fig/fuzzyworkflow.jpg" align="center" width="100%"/>
-</p>
+The code in the folder [models](models/Fed.py) is for enhancing convergence speed and  model drift problems of LDP-FL approach.
 
-The code in the folder [fuzzy logic](https://github.com/liyan2015/AdaptiveBatchHE/tree/main/fuzzy%20logic) is for determining the HE key size of clients.
+`main.py` is the main function.
 
-`fuzzy_logic_main.py` is the main function.
+The input is the path of the dataset.
 
-There are three inputs: `input_NS`, `input_TR`, and `input_CC`.
-
-Their values are between 0 and 1.
-
-<!-- end fuzzy -->
+<!-- end Clipping -->
 
 
 ## Prerequisites
