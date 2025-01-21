@@ -2,7 +2,7 @@
 
 <!-- start intro -->
 
-This repository provides the implementation of the paper ["Adaptive Batch Homomorphic Encryption for Joint Federated Learning in Cross-Device Scenarios"](https://ieeexplore.ieee.org/document/10275042), which is published in IEEE INTERNET OF THINGS JOURNAL. In this paper, we propose an adaptive batch HE framework for cross-device FL, which determines cost-efficient and sufficiently secure encryption strategies for clients with heterogeneous data and system capabilities. Our framework can achieve comparable accuracy to plain HE (i.e., encryption applied per gradient), while reducing training time by 3×-31×, and communication cost by 45×-66×.
+This repository provides the implementation of the paper ["AdapLDP-FL: An Adaptive Local DifferentialPrivacy for Federated Learning"](https://10.1109/TMC.2024.3374789), which is published in IEEE TRANSACTIONS ON MOBILE COMPUTING. This paper investigates FL under the scenario of noise optimization with LDP. Specifically, given a certain privacy budget, we design the adaptive LDP method via a noise scaler, which adaptively optimizes the noise size of every client. Secondly, we dynamically tailor the model direction after adding noise by the designed a direction matrix, to overcome the model drift problem caused by adding noises to the client model.Finally, our method achieves higher accuracy than some existing works with the same privacy level and the convergence speed is significantly improved.
 
 <table>
   <tr>
