@@ -26,13 +26,9 @@ We built a privacy-preserving FL based on our proposed adaptive LDP, mainly cons
 
 <!-- end intro -->
 
-## 1. Clustering of Clients based on Sparsity of CNNs
+## 1. Optimizing Noise Constraints
 
 <!-- start sparsity -->
-
-<p align="center">
-<img src="fig/sparsity.jpg" align="center" width="40%"/>
-</p>
 
 The code in the folder [CNN Sparisty](https://github.com/liyan2015/AdaptiveBatchHE/tree/main/CNN%20Sparisty) is for determining the sparsity vectors of clients.
 
@@ -42,7 +38,7 @@ The input is the path of the dataset.
 
 <!-- end sparsity -->
 
-## 2. Selection of HE Key Size for Each Client based on Fuzzy Logic
+## 2. Skipping of Clipping Operation
 
 <!-- start fuzzy -->
 
@@ -60,21 +56,6 @@ Their values are between 0 and 1.
 
 <!-- end fuzzy -->
 
-## 3. Accuracy-lossless Batch Encryption and Aggregation
-
-<!-- start batch -->
-
-<p align="center">
-<img src="fig/batchencry_server_client.jpg" align="center" width="100%"/>
-</p>
-
-The code in the folder [batch encryption](https://github.com/liyan2015/AdaptiveBatchHE/tree/main/batch%20encryption) is for accuracy-lossless batch encryption and aggregation of model parameters for FL training.
-
-`federated_experiment_main.py` is the main function.
-
-The code needs a proper hyperparameter K to run correctly, of which reason has been explained with detail in the paper. The default K value is 4. For specific settings, please refer to the comments in the code.
-
-<!-- end batch -->
 
 ## Prerequisites
 
@@ -88,14 +69,27 @@ To run the code, it needs some libraies:
 
 Our environment is shown in the file, named `environment.yaml`.
 
+## Parameter List
+
+**Datasets**: MNIST, Cifar-10, Fashion-MNIST
+
+**Model**: CNN, MLP
+
+You can run like main.py this:
+
+python main.py --dataset mnist --iid --model cnn --epochs 50 --frac 0.1 --dp_mechanism Gaussian --dp_epsilon 10 --dp_delta 1e-5
+
+  
+
+
 ## Citing
 
 <!-- start citation -->
 
 If you use this repository, please cite:
 ```bibtex
-@article{han2023adaptiveBatchHE,
-  title={Adaptive Batch Homomorphic Encryption for Joint Federated Learning in Cross-Device Scenarios},
+@article{yue2025AdapLDP-FL,
+  title={AdapLDP-FL: An Adaptive Local DifferentialPrivacy for Federated Learning},
   author={Han, Junhao and Yan, Li},
   journal={IEEE Internet of Things Journal},
   volume={Early Access},
@@ -108,20 +102,3 @@ If you use this repository, please cite:
 
 
 
-### Parameter List
-
-**Datasets**: MNIST, Cifar-10, Fashion-MNIST
-
-**Model**: CNN, MLP
-
-You can run like this:
-
-python main.py --dataset cifar --iid --model cnn --epochs 50 --frac 0.1 --dp_mechanism no_dp
-
-### Laplace Mechanism
-python main.py --dataset mnist --iid --model cnn --epochs 300 --frac 0.1 --dp_mechanism Laplace --dp_epsilon 5
-
-### Gaussian Mechanism
-python main.py --dataset mnist --iid --model cnn --epochs 50 --frac 0.1 --dp_mechanism Gaussian --dp_epsilon 10 --dp_delta 1e-5
-
-  
