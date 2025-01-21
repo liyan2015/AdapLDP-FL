@@ -1,4 +1,4 @@
-# AdaptiveBatchHE
+# AdapLDP-FL
 
 <!-- start intro -->
 
@@ -6,16 +6,14 @@ This repository provides the implementation of the paper ["AdapLDP-FL: An Adapti
 
 <table>
   <tr>
-    <td width="25%"><img src="fig/non_iid_three_trainingtime.jpg" width="300"></td>
-    <td width="25%"><img src="fig/non_iid_epochs_accuracy.jpg" width="300"></td>
-    <td width="25%"><img src="fig/non_iid_communication_cost.jpg" width="300" ></td>
-    <td width="25%"><img src="fig/batchencryption_epochs_accuracy.jpg" width="300"></td>
+    <td width="25%"><img src="Fig/github_loss76.png" width="300"></td>
+    <td width="25%"><img src="Fig/githubacc103.png" width="300"></td>
+    <td width="25%"><img src="Fig/githubspeed83.png" width="300" ></td>
   </tr>
   <tr>
-    <td width="25%">Training time over 100 epochs</td>
-    <td width="25%">Testing accuracy over epochs</td>
-    <td width="25%">Communication cost in one epoch</td>
-    <td width="25%">Cost efficiency under various HE key sizes</td>
+    <td width="25%">Loss function on three public datasets.</td>
+    <td width="25%">Convergence speed improvement compared with LDP-FL</td>
+    <td width="25%">Comparison of model performance via CNN networks.</td>
   </tr>
 </table>
 
