@@ -90,10 +90,15 @@ If you use this repository, please cite:
 ```bibtex
 @article{yue2025AdapLDP-FL,
   title={AdapLDP-FL: An Adaptive Local DifferentialPrivacy for Federated Learning},
-  author={Yue, Gaofeng and Yan, Li},
+  author       = {Gaofeng Yue and
+                  Li Yan and
+                  Liuwang Kang and
+                  Chao Shen},
   journal={IEEE Transactions on Mobile Computing},
-  volume={Early Access},
-  year={2025},
+  volume       = {24},
+  number       = {6},
+  pages        = {5569--5583},
+  year         = {2025},
   publisher={IEEE}
 }
 ```
