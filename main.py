@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Python version: 3.6
-# Author: YGF
-# Des: AdapLDP-FL.
+
 
 from dataclasses import replace
 from cv2 import DRAW_MATCHES_FLAGS_DEFAULT
