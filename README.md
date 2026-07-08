@@ -99,6 +99,7 @@ If you use this repository, please cite:
   publisher={IEEE}
 }
 ```
+List of publications that cite this work: [Google Scholar](https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8400162044002117980)
 
 <!-- end citation -->
 
